@@ -1,0 +1,13 @@
+# Windows平台
+*.ncb
+*.suo
+*.user
+Debug
+Release
+Temp
+
+# Mac
+.DS_Store
+DerivedData
+*.xcuserdatad
+*.swp
