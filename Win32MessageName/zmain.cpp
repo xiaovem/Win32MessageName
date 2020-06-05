@@ -1,4 +1,5 @@
 #include <Windows.h>
+#include "Win32MessageName.hpp"
 
 LRESULT CALLBACK WndProc(HWND wnd, UINT mt, WPARAM w, LPARAM l);
 
@@ -31,6 +32,8 @@ int WINAPI WinMain(HINSTANCE ins, HINSTANCE, PSTR, int n)
 
 LRESULT CALLBACK WndProc(HWND wnd, UINT mt, WPARAM w, LPARAM l)
 {
+    OutputDebugStringA(wmname(mt));
+    OutputDebugStringA("\n");
     if (mt == WM_DESTROY)
     {
         PostQuitMessage(1);
